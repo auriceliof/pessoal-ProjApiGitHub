@@ -1,0 +1,14 @@
+.pag-home-content{
+    color: var(--pag-color-font-primary);
+}
+
+.pag-home-btn {
+    font-size: 16px;
+    background-color: var(--pag-color-btn-primary);
+    color: var(--pag-color-font-tertiary);
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

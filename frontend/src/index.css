@@ -55,8 +55,16 @@ main {
   margin-bottom: 20px;
 }
 
+.pag-mb40 {
+  margin-bottom: 40px;
+}
+
 .pag-mt20 {
   margin-top: 20px;
+}
+
+.pag-mt40 {
+  margin-top: 40px;
 }
 
 .pag-section-title {

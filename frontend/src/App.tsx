@@ -1,12 +1,13 @@
 import "./App.css";
 import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
 
   return (
     <>
       <Header />
-      <h1>PROJETO API GITHUB</h1>
+      <Home />
     </>
   
   );
