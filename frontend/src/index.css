@@ -1,68 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --dsc-color-bg-primary: #e8e8e8;
+  --dsc-color-bg-secondary: #ffe500;
+  --dsc-color-bg-tertiary: #636363;
+  --dsc-color-bg-quaternary: #3483fa;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --dsc-color-card-bg: #fff;
+  --dsc-color-card-border: #d9d9d9;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --dsc-color-btn-primary: #0caf1d;
+  --dsc-color-btn-secondary: #f33;
+
+  --dsc-color-font-primary: #636363;
+  --dsc-color-font-secondary: #3483fa;
+  --dsc-color-font-tertiary: #fff;
+  --dsc-color-font-placeholder: #d9d9d9;
+
+  --dsc-color-error: #f33;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  font-family: "Open Sans";
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+html,
+body {
+  background-color: var(--dsc-color-bg-primary);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+main {
+  padding: 0 20px;
+}
+
+/*-----------------------------------------------------------------*/
+/* generic styles */
+
+.dsc-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dsc-mb20 {
+  margin-bottom: 20px;
+}
+
+.dsc-mt20 {
+  margin-top: 20px;
+}
+
+.dsc-section-title {
+  text-align: center;
+  color: var(--dsc-color-font-primary);
+  font-size: 16px;
+}
+
+.dsc-txt-left {
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+  .dsc-section-title {
+    text-align: left;
+    font-size: 24px;
   }
 }
