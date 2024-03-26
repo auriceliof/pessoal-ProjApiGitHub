@@ -1,15 +1,12 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import GitSearch from "./pages/GitSearch";
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <GitSearch />
-    </>
-  
+        
+        <Outlet />
+
   );
 }
 export default App;

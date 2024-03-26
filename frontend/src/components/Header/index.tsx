@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export default function Header() {
@@ -6,9 +7,13 @@ export default function Header() {
         <header className="pag-header">
             <nav className="pag-container">
                 <div className="pag-header-navbar">
-                    <h1>API GitHub</h1>
+                    <Link to="/">
+                        <h1>API GitHub</h1>
+                    </Link>
                     <div>
-                        <a href="#">Entrar</a>
+                        <Link to="/">
+                            <a href="#">Entrar</a>
+                        </Link>
                     </div>
                 </div>
             </nav>

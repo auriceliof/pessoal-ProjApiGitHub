@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import './styles.css';
 
@@ -12,7 +13,9 @@ export default function Home() {
                 <h4>Buscar perfil de usuários do GitHub</h4>
             </div>
             <div>
-                <ButtonPrimary name="Começar" />
+                <Link to="/git">
+                    <ButtonPrimary name="Começar" />
+                </Link>
             </div>
         </div>
     );
