@@ -13,7 +13,7 @@
     border-radius: 10px;
     padding: 40px;
 }
-PÁGINA GITSEARCH
+
 .pag-gitsearch-input {
     width: 30%;
     border: 1px solid var(--pag-color-bg-tertiary);
@@ -25,4 +25,11 @@ PÁGINA GITSEARCH
 
 .pag-gitsearch-input::placeholder {
     font-weight: lighter;
+}
+
+.pag-gitsearch-resultgit-card {
+    width: 100%;
+    background: var(--pag-color-bg-tertiary);
+    border-radius: 10px;
+    padding: 40px;
 }
