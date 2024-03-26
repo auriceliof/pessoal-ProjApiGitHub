@@ -4,22 +4,21 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin: 20px 60px;
+    margin: 2% 10%;
 }
 
 .pag-gitsearch-card {
-    justify-content: flex-start;
     width: 100%;
     background: var(--pag-color-bg-quaternary);
     border-radius: 10px;
     padding: 40px;
 }
-
+PÁGINA GITSEARCH
 .pag-gitsearch-input {
-    width: 50%;
+    width: 30%;
     border: 1px solid var(--pag-color-bg-tertiary);
     border-radius: 3px;
-    padding: 5px 10px;
+    padding: 10px;
     color: var(--pag-color-font-secondary);    
     font-weight: bold;
 }
