@@ -1,13 +1,13 @@
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import GitSearch from "./pages/GitSearch";
 
 function App() {
 
   return (
     <>
       <Header />
-      <Home />
+      <GitSearch />
     </>
   
   );
