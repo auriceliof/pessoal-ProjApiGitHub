@@ -1,3 +1,4 @@
+import ButtonPrimary from '../../components/ButtonPrimary';
 import './styles.css';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
                 <h4>Buscar perfil de usuários do GitHub</h4>
             </div>
             <div>
-                <button className='pag-home-btn'>Começar</button>
+                <ButtonPrimary name="Começar" />
             </div>
         </div>
     );
