@@ -15,6 +15,11 @@
     background: var(--pag-color-bg-primary);
 }
 
+.pag-resultgit-foto img {
+    width: 95%;
+    height: 95%;
+}
+
 .pag-resultgit-information {
     width: 90%;
     padding: 10px;
@@ -45,5 +50,3 @@
 .pag-resultgit-content h6 {
     color: var(--pag-color-font-secondary);
 }
-
-

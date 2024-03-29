@@ -2,10 +2,10 @@ import './styles.css';
 
 type Props = {
     foto: any;
-    nome: string;
-    perfil: string;
-    seguidores: string;
-    localidade: string;
+    nome?: string;
+    perfil?: string;
+    seguidores?: number;
+    localidade?: string;
 }
 
 export default function ResultGit({foto, nome, perfil, seguidores, localidade}: Props) {

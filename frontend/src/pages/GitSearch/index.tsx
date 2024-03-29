@@ -1,13 +1,24 @@
+import './styles.css';
 import { useState } from 'react';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import ResultGit from '../../components/ResultGit';
-import './styles.css';
+import axios from 'axios';
 
 type formData = {
     git: string;
-}
+};
+
+type Perfil = {
+    avatar_url: string;
+    url: string;
+    followers: number;
+    location: string;
+    name: string;
+};
 
 export default function GitSearch() {
+
+    const [ perfil, setPerfil ] = useState<Perfil>();
 
     const [ formData,  setFormData ] = useState<formData>({
 
@@ -24,7 +35,15 @@ export default function GitSearch() {
 
     function handleSubmit(event: any) {
         event.preventDefault();
-        console.log(formData)
+        
+        axios.get(`https://api.github.com/users/${formData.git}`)
+            .then((response) => {
+                setPerfil(response.data);
+            })
+            .catch((error) => {
+                setPerfil(undefined);
+                console.log(error);
+            })
     }
 
     return (
@@ -49,15 +68,17 @@ export default function GitSearch() {
                     </div>
                 </form>
             </div>
-            <div className="pag-mt20 pag-gitsearch-resultgit-card">
-                <ResultGit 
-                    foto="foto"
-                    nome="nome"
-                    perfil="perfil" 
-                    seguidores="seguidores"
-                    localidade="localidade"
-                />
-            </div>
+            {perfil && (
+                <div className="pag-mt20 pag-gitsearch-resultgit-card">
+                    <ResultGit 
+                        foto={perfil?.avatar_url}
+                        nome={perfil?.name}
+                        perfil={perfil?.url}
+                        seguidores={perfil?.followers}
+                        localidade={perfil?.location}
+                    />
+                </div>
+            )}
         </div>
     );
 }
