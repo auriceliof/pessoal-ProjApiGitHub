@@ -23,8 +23,8 @@ export default function GitSearch() {
     }
 
     function handleSubmit(event: any) {
-        event.prevent.default();
-        console.log("Teste do botão")
+        event.preventDefault();
+        console.log(formData)
     }
 
     return (
