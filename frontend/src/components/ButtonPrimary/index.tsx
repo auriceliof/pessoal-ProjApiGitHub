@@ -7,8 +7,8 @@ type Props = {
 export default function ButtonPrimary({name}: Props) {
 
     return(
-        <div className="pag-btn">
+        <button className="pag-btn">
             {name}
-        </div>
+        </button>
     );
 }
