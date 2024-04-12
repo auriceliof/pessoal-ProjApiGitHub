@@ -17,6 +17,12 @@ type Perfil = {
     public_repos: number;    
 };
 
+type Repos = {
+    name: string;
+    html_url: string;
+    description: string;
+}
+
 export default function GitSearch() {
 
     const [ perfil, setPerfil ] = useState<Perfil>();

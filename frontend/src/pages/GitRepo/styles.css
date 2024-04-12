@@ -1,0 +1,82 @@
+.pag-gitrepo-card {
+    display: flex;
+    background: var(--pag-color-bg-tertiary);
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+    margin: 2% 10%;
+}
+
+.pag-gitrepo-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    border: 1px solid var(--pag-color-bg-primary);
+    border-radius: 5px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background: var(--pag-color-bg-primary);
+}
+
+.pag-gitrepo-foto img {
+    width: 95%;
+    height: 95%;
+}
+
+.pag-gitrepo-information {
+    width: 100%;
+    padding: 10px;
+    background: var(--pag-color-bg-primary);
+    border: 1px solid var(--pag-color-bg-primary);
+    border-radius: 5px;
+
+}
+
+.pag-gitrepo-information h4 {
+    color: var(--pag-color-font-secondary);
+    margin-bottom: 10px;
+}
+
+.pag-gitrepo-content {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--pag-color-bg-tertiary);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.pag-gitrepo-content h5 {
+    color: var(--pag-color-font-primary);
+    margin-right: 10px;
+}
+
+.pag-gitrepo-content h6 {
+    color: var(--pag-color-font-secondary);
+}
+
+.pag-gitrepo-card-repo {
+    background: var(--pag-color-bg-quaternary);
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+    margin: 2% 10%;
+}
+
+.pag-gitrepo-card-repo h4 {
+    margin-bottom: 10px;
+}
+
+.pag-gitrepo-repository {
+    width: 100%;
+    padding: 10px;
+    background: var(--pag-color-bg-primary);
+    border: 1px solid var(--pag-color-bg-primary);
+    border-radius: 5px;
+
+}
+
+.pag-gitrepo-repository h4 {
+    color: var(--pag-color-font-secondary);
+    margin-bottom: 10px;
+}
