@@ -1,3 +1,4 @@
+import ButtonPrimary from '../ButtonPrimary';
 import './styles.css';
 
 type Props = {
@@ -14,6 +15,7 @@ export default function ResultGit({foto, nome, perfil, localidade, seguidores, r
     return (
         <div className="pag-resultgit-container">
             <div className="pag-resultgit-card">
+                                
                 <div className="pag-resultgit-foto">
                     <img src={foto} alt='foto' />    
                 </div>
@@ -40,9 +42,11 @@ export default function ResultGit({foto, nome, perfil, localidade, seguidores, r
                     <div className="pag-resultgit-content">
                         <h5>Repositórios públicos: </h5>
                         <h6>{repoPublicos}</h6>
-                    </div>
-                    
-                </div>
+                    </div>                    
+                </div>                    
+            </div>
+            <div className="pag-resultgit-btn pag-mt20">
+                <ButtonPrimary name='Ver Repositórios'></ButtonPrimary>
             </div>
         </div>
     );
