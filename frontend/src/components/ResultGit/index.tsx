@@ -4,11 +4,12 @@ type Props = {
     foto: any;
     nome?: string;
     perfil?: string;
-    seguidores?: number;
     localidade?: string;
+    seguidores?: number;
+    repoPublicos?: number;    
 }
 
-export default function ResultGit({foto, nome, perfil, seguidores, localidade}: Props) {
+export default function ResultGit({foto, nome, perfil, localidade, seguidores, repoPublicos}: Props) {
 
     return (
         <div className="pag-resultgit-container">
@@ -29,13 +30,18 @@ export default function ResultGit({foto, nome, perfil, seguidores, localidade}: 
                         <h6>{perfil}</h6>                        
                     </div>
                     <div className="pag-resultgit-content">
+                        <h5>Localidade: </h5>
+                        <h6>{localidade}</h6>
+                    </div>
+                    <div className="pag-resultgit-content">
                         <h5>Seguidores: </h5>
                         <h6>{seguidores}</h6>
                     </div>
                     <div className="pag-resultgit-content">
-                        <h5>Localidade: </h5>
-                        <h6>{localidade}</h6>
+                        <h5>Repositórios públicos: </h5>
+                        <h6>{repoPublicos}</h6>
                     </div>
+                    
                 </div>
             </div>
         </div>

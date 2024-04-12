@@ -10,10 +10,11 @@ type formData = {
 
 type Perfil = {
     avatar_url: string;
-    url: string;
-    followers: number;
-    location: string;
     name: string;
+    url: string;
+    location: string;
+    followers: number;
+    public_repos: number;    
 };
 
 export default function GitSearch() {
@@ -74,8 +75,9 @@ export default function GitSearch() {
                         foto={perfil?.avatar_url}
                         nome={perfil?.name}
                         perfil={perfil?.url}
-                        seguidores={perfil?.followers}
                         localidade={perfil?.location}
+                        seguidores={perfil?.followers}
+                        repoPublicos={perfil?.public_repos}
                     />
                 </div>
             )}
