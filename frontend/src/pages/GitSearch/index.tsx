@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import ResultGit from '../../components/ResultGit';
 import axios from 'axios';
+import ResultGitRepo from '../../components/ResultGitRepo';
 
 type formData = {
     git: string;
@@ -18,6 +19,7 @@ type Perfil = {
 };
 
 type Repos = {
+    id: number;
     name: string;
     html_url: string;
     description: string;
@@ -26,6 +28,10 @@ type Repos = {
 export default function GitSearch() {
 
     const [ perfil, setPerfil ] = useState<Perfil>();
+
+    const [ repo, setRepo ] = useState<Repos[]>([]);
+
+    const [ findRepo, setFindRepo ] = useState<Repos>();
 
     const [ formData,  setFormData ] = useState<formData>({
 
@@ -50,7 +56,17 @@ export default function GitSearch() {
             .catch((error) => {
                 setPerfil(undefined);
                 console.log(error);
-            })
+            })        
+    }
+
+    function handleSubmitRepos(event: any) {
+        event.preventDefault();
+
+        axios.get(`https://api.github.com/users/${formData.git}/repos`)
+        .then((response) => {
+            setFindRepo(response.data);
+            setRepo(response.data);
+        })
     }
 
     return (
@@ -59,7 +75,7 @@ export default function GitSearch() {
                 <div className="pag-mb20">
                     <h2>Encontre um perfil GitHub</h2>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                     <div className="pag-mb40">
                         <input 
                             value={formData.git}
@@ -85,8 +101,26 @@ export default function GitSearch() {
                         seguidores={perfil?.followers}
                         repoPublicos={perfil?.public_repos}
                     />
+                    <form className="pag-mt20 pag-gitsearch-resultgit-btn" onSubmit={handleSubmitRepos}>
+                        <ButtonPrimary name="Ver repositórios" />
+                    </form>
                 </div>
             )}
+            {findRepo &&
+                <div className="pag-mt20 pag-gitsearch-resultRepos-card">
+                    <h4>Repositórios Público</h4>
+                    {repo.map((product) =>  (
+                        <div key={product.id} className="pag-mt20">
+                            <ResultGitRepo
+                                nomeRepo={product?.name}
+                                urlRepo={product?.html_url}
+                                descRepo={product?.description}                
+                            />
+                        </div>             
+                    ))}
+                </div>
+            }
+            
         </div>
     );
 }

@@ -50,8 +50,3 @@
 .pag-resultgit-content h6 {
     color: var(--pag-color-font-secondary);
 }
-
-.pag-resultgit-btn {
-    display: flex;
-    justify-content: center;
-}
