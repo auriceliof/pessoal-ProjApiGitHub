@@ -35,6 +35,7 @@ FRONTEND
   O SISTEMA TERÁ UMA INTERFACE PARA PESQUISA DE PERFIL DO GITHUB
 
   APARECERÁ UM BOTÃO PARA MOSTRAR TODOS OS REPOSITÓRIOS DO PERFIL SELECIONADO
+
     
 -----------------------------------------------------------
 - INTERFACES
@@ -44,7 +45,7 @@ FRONTEND
 ![image](https://github.com/auriceliof/Pessoal-ProjApiGitHub/assets/4201131/36e940b6-5bc9-436c-be55-0c56e35c234e)
 
 
-  PESQUISA GIT
+    PESQUISA GIT
   
 ![image](https://github.com/auriceliof/Pessoal-ProjApiGitHub/assets/4201131/a835f11b-f38d-415a-8997-26b2cb21c439)
 
